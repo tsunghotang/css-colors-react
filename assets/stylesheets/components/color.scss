@@ -1,0 +1,23 @@
+.color {
+  &__ name {
+    font-size: 20;
+    opacity: 1;
+  }
+
+  .color:hover {
+    opacity:1
+  }
+
+
+  @include media(tabletAndUp) {
+    .color:hover &__name {
+      opacity: 1;
+      transition: .25s all ease-in-out;
+
+
+    }
+    &__name {
+      opacity: 0
+    }
+  }
+}
