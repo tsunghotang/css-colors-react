@@ -5,9 +5,9 @@ import { colorJSON } from "../data/css_colors";
 import { ColorDetails } from "./ColorDetails";
 
 const App = () => {
-  [currentFilter, setCurrentFilter] = useState("All");
-  [colors] = useState(colorJSON);
-  [color, setColor] = useState(null);
+  const [currentFilter, setCurrentFilter] = useState("All");
+  const [colors] = useState(colorJSON);
+  const [color, setColor] = useState(null);
 
   const selectFilter = ({ currentTarget }) => {
     toggleFilterList();
