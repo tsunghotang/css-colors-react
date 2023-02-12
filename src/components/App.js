@@ -19,7 +19,7 @@ const App = () => {
   };
 
   const toggleFilterList = () => {
-    filterEl = document.querySelector(".filter-list");
+    const filterEl = document.querySelector(".filter-list");
     filterEl.classList.toggle("filter-list--show");
   };
 
