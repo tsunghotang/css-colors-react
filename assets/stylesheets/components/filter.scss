@@ -1,0 +1,10 @@
+.filter {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-s);
+
+  &__count {
+    opacity: .5;
+  }
+}

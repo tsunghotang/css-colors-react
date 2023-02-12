@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  @include media(tabletAndUp) {
+    flex-direction: row;
+  }
+}

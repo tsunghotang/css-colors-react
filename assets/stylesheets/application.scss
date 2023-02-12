@@ -6,110 +6,48 @@
 @import "config/reset";
 
 // Components
-// @import "components/btn";
-// @import "components/error_message";
+@import "components/header";
+@import "components/filterList";
+@import "components/filter";
+@import "components/color";
+@import "components/colorDetails";
+@import "components/swatch";
+
+
 
 // Layouts
-// @import "layouts/container";
-// @import "layouts/header";
+@import "layouts/app";
 
+.black {
+  color: black;
+}
 
-header {
-  // position: sticky;
-  // top: 0;
-  background-color: color-primary-bg;
+.white {
+  color: white;
+}
+.white-link {
+  color: white;
+  background-color: #0000001a;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+main {
+  flex: 1;
+}
+
+.colors-container {
   @include media(tabletAndUp) {
-    height: 100vh;
-    width: 300px;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
   }
-}
-
-
-.header {
-  // background-color:  var(--color-primary-bg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-
-
-  padding: 1.5rem;
-  // color: var(--color-text-header);
-
-
-
-  &__filterBtn {
-    align-self: center;
-    padding: 0.5rem;
-    border-radius: 8px;
-    // color: var(--color-text-muted);
-    // background-color: var(--color-bg-tertiary);
-  }
-
-
-  &__filters {
-    display: none;
-    padding: 22px;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xs);
-    list-style: none;
-    position: absolute;
-    width: 100%;
-    &--show {
-      display: grid;
-    }
-
-  }
-  &__filter {
-    background-color: var(--color-bg-secondary);
-    display: flex;
-    padding: var(--space-xs);
-  }
-  &__filter:hover {
-    background-color: var(--color-bg-quaternary);
-  }
-
-  @include media(tabletAndUp) {
-    flex-direction: column;
-
-
-    &__filters {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 0 50px; // using padding to shrink the length of the filter boxes
-      justify-content: space-evenly;
-      position: sticky;
-    }
-    &__filter {
-
-    }
-    &__filterBtn {
-      display: none;
-    }
-
-  }
-
-}
-
-.rainbow-box {
-  width: 18px;
-  height: 18px;
-  background: linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 1) 0%,
-      rgba(255, 154, 0, 1) 10%,
-      rgba(208, 222, 33, 1) 20%,
-      rgba(79, 220, 74, 1) 30%,
-      rgba(63, 218, 216, 1) 40%,
-      rgba(47, 201, 226, 1) 50%,
-      rgba(28, 127, 238, 1) 60%,
-      rgba(95, 21, 242, 1) 70%,
-      rgba(186, 12, 248, 1) 80%,
-      rgba(251, 7, 217, 1) 90%,
-      rgba(255, 0, 0, 1) 100%
-  );
-}
-
-.header_filter--selected{
-  background-color: var(--color-bg-tertiary);
 }

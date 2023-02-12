@@ -165,7 +165,7 @@
 //   ],
 // }; // Reference
 
-CssColorJSON = {
+colorJSON = {
   pink: [
     { name: "Pink", hex: "ffc0cb", rgb: "255,192,203" },
     { name: "LightPink", hex: "FFB6C1", rgb: "255,182,193" },
