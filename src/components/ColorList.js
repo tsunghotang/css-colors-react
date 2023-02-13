@@ -24,11 +24,21 @@ function ColorList({ colors, currentFilter, showColor, isLight }) {
       const sortedColorsArr = sortColorList(colorsArr.flat());
 
       return sortedColorsArr.map((color) => (
-        <Color color={color} showColor={showColor} isLight={isLight} />
+        <Color
+          color={color}
+          showColor={showColor}
+          isLight={isLight}
+          key={color.name}
+        />
       ));
     } else {
       return sortColorList(colors[currentFilter.toLowerCase()]).map((color) => (
-        <Color color={color} showColor={showColor} isLight={isLight} />
+        <Color
+          color={color}
+          showColor={showColor}
+          isLight={isLight}
+          key={color.name}
+        />
       ));
     }
   };

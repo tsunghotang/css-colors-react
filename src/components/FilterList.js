@@ -16,6 +16,7 @@ function FilterList({ colors, selectFilter, currentFilter }) {
           selectFilter={selectFilter}
           currentFilter={currentFilter}
           colorCount={colors[color].length}
+          key={color}
         />
       ))}
     </ul>
